@@ -23,7 +23,8 @@
             android:exported="false" />
         <activity
             android:name=".AddCourseActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize"/>
         <activity
             android:name=".CourseActivity"
             android:exported="false" />

@@ -205,6 +205,7 @@ public class FirstAidKitActivity extends AppCompatActivity implements ActiveMedi
                 medicamentToUpdate.setType(type.getSelectedItem().toString().trim());
                 medicamentToUpdate.setComment(comment.getText().toString().trim());
                 medicamentToUpdate.save();
+                Toast.makeText(getApplicationContext(), "Лекарство обновлено", Toast.LENGTH_SHORT).show();
                 reloadFragment();
                 widgetWrap.setVisibility(View.INVISIBLE);
             }
@@ -223,6 +224,7 @@ public class FirstAidKitActivity extends AppCompatActivity implements ActiveMedi
                     }
                 }
                 reloadFragment();
+                Toast.makeText(getApplicationContext(), "Лекарство удалено", Toast.LENGTH_SHORT).show();
                 widgetWrap.setVisibility(View.INVISIBLE);
             }
         });

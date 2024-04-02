@@ -54,17 +54,21 @@ public class CourseFragment extends Fragment {
             // Создание адаптера и настройка ListView
             adapter = new CourseAdapter(getContext(), validCourses);
             listView.setAdapter(adapter);
-//            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//                @Override
-//                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                    Medicament selectedMedicament = (Medicament) parent.getItemAtPosition(position);
-//                    if (getActivity() instanceof ActiveMedicamentsFragment.OnMedicamentSelectedListener) {
-//                        ((ActiveMedicamentsFragment.OnMedicamentSelectedListener) getActivity()).onMedicamentSelected(selectedMedicament);
-//                    }
-//                }
-//            });
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    Course selectedCourse = (Course) parent.getItemAtPosition(position);
+                    if (getActivity() instanceof OnCourseSelectedListener) {
+                        ((OnCourseSelectedListener) getActivity()).onCourseSelected(selectedCourse);
+                    }
+                }
+            });
         }
         return view;
+    }
+
+    public interface OnCourseSelectedListener {
+        void onCourseSelected(Course course);
     }
 
     private List<Course> filterValidCourses0(List<Course> courses) {

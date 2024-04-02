@@ -89,6 +89,412 @@
     </RelativeLayout>
     <!--  Конец виджета добавления  -->
 
+<!--  Виджет UD курса  -->
+    <RelativeLayout
+        android:id="@+id/widget_course_wrap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="#33000000"
+        android:clickable="true"
+        android:elevation="8dp"
+        android:gravity="center"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/widget_course"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="56dp"
+            android:layout_marginEnd="56dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="50dp"
+            android:background="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/widget_course_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="20dp"
+                            android:fontFamily="@font/ubuntu_medium"
+                            android:gravity="center"
+                            android:text="Информация о курсе"
+                            android:textSize="18sp" />
+
+                        <ImageButton
+                            android:id="@+id/widget_course_close_button"
+                            android:layout_width="17dp"
+                            android:layout_height="17dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_margin="8dp"
+                            android:background="@null"
+                            android:contentDescription="Закрыть"
+                            android:src="@drawable/close_ico"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/medicament_form"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textView">
+
+                        <TextView
+                            android:id="@+id/medicament_form_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginStart="5dp"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:src="@drawable/username_icon"
+                            android:text="Название таблеток"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/medicament_form_input"
+                            android:layout_width="242dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:hint="Название таблеток"
+                            android:inputType="textPersonName"
+                            android:minHeight="48dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/medicament_type_form"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/quantity_form">
+
+                        <TextView
+                            android:id="@+id/medicament_type_form_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginStart="5dp"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:src="@drawable/username_icon"
+                            android:text="Вид таблеток"
+                            android:textSize="15sp" />
+
+                        <Spinner
+                            android:id="@+id/medicament_type_form_input"
+                            android:layout_width="242dp"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/medicament_quantity_form"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/type_form">
+
+                        <TextView
+                            android:id="@+id/medicament_quantity_form_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginStart="5dp"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:src="@drawable/username_icon"
+                            android:text="Разовая доза"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/medicament_quantity_form_input"
+                            android:layout_width="242dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:hint="Разовая доза"
+                            android:inputType="number"
+                            android:minHeight="48dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/food_form"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/quantity_form">
+
+                        <TextView
+                            android:id="@+id/food_form_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginStart="5dp"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:src="@drawable/username_icon"
+                            android:text="Прием относительно еды"
+                            android:textSize="15sp" />
+
+                        <Spinner
+                            android:id="@+id/food_form_input"
+                            android:layout_width="242dp"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/patient_form"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/quantity_form">
+
+                        <TextView
+                            android:id="@+id/patient_form_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginStart="5dp"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:src="@drawable/username_icon"
+                            android:text="Лечущийся"
+                            android:textSize="15sp" />
+
+                        <Spinner
+                            android:id="@+id/patient_form_input"
+                            android:layout_width="242dp"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/time_form"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/quantity_form">
+
+                        <TextView
+                            android:id="@+id/time_form_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginStart="5dp"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:src="@drawable/username_icon"
+                            android:text="Время приема"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/time_form_input"
+                            android:layout_width="242dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:hint="Время приема"
+                            android:inputType="time"
+                            android:minHeight="48dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/week_form"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/quantity_form">
+
+                        <TextView
+                            android:id="@+id/week_form_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginStart="5dp"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:src="@drawable/username_icon"
+                            android:text="Дни недели"
+                            android:textSize="15sp" />
+
+                        <Button
+                            android:id="@+id/button_open_dialog"
+                            android:layout_width="242dp"
+                            android:layout_height="40dp"
+                            android:text="Выбрать дни недели"
+                            android:layout_centerInParent="true"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/start_date_form"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/quantity_form">
+
+                        <TextView
+                            android:id="@+id/start_date_form_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginStart="5dp"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:src="@drawable/username_icon"
+                            android:text="Дата начала"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/start_date_form_input"
+                            android:layout_width="242dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:hint="Дата начала"
+                            android:inputType="text"
+                            android:minHeight="48dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/end_date_form"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/quantity_form">
+
+                        <TextView
+                            android:id="@+id/end_date_form_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginStart="5dp"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:src="@drawable/username_icon"
+                            android:text="Дата окончания"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/end_date_form_input"
+                            android:layout_width="242dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:hint="Дата окончания"
+                            android:inputType="text"
+                            android:minHeight="48dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/comment_form"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/type_form">
+
+                        <TextView
+                            android:id="@+id/comment_form_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:src="@drawable/username_icon"
+                            android:text="Комментарий"
+                            android:textSize="15sp"
+                            android:layout_marginStart="5dp"
+                            android:fontFamily="@font/ubuntu_light"/>
+
+                        <EditText
+                            android:id="@+id/comment_form_input"
+                            android:layout_width="242dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:hint="Комментарий"
+                            android:inputType="text"
+                            android:minHeight="48dp" />
+                    </LinearLayout>
+
+
+                    <Button
+                        android:id="@+id/add_course_button"
+                        android:layout_width="242dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="28dp"
+                        android:backgroundTint="@color/blue"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:text="Сохранить изменения"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/comment_form" />
+
+                    <Button
+                        android:id="@+id/delete_course_button"
+                        android:layout_width="242dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:text="Удалить данный курс"
+                        android:textSize="16sp"
+                        android:layout_marginTop="20dp"
+                        android:textColor="#BA0A0A"
+                        android:backgroundTint="#CCCCCC"
+                        android:layout_marginBottom="100dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/add_course_button" />
+                </LinearLayout>
+            </ScrollView>
+
+        </RelativeLayout>
+    </RelativeLayout>
+<!--  Конец виджета UD курса  -->
+
     <LinearLayout
         android:id="@+id/button"
         android:layout_width="0dp"

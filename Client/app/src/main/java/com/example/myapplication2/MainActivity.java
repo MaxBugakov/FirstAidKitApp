@@ -107,7 +107,6 @@ public class MainActivity extends AppCompatActivity {
 //                Log.d("PrintLine", allCourses.get(0).getDaysOfIntake().get(5));
 
 //            SugarRecord.deleteAll(Course.class);
-
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                     CharSequence name = "General Notifications"; // Название канала для пользователя
                     String description = "Channel for general notifications"; // Описание канала
@@ -118,6 +117,7 @@ public class MainActivity extends AppCompatActivity {
                     NotificationManager notificationManager = getSystemService(NotificationManager.class);
                     notificationManager.createNotificationChannel(channel);
                 }
+
 
             setDate();
             TextView userName = findViewById(R.id.user_name);
