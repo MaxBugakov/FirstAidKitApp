@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity"
+    android:background="#FFFFFF">
+    <!--  Виджет добавление  -->
+    <RelativeLayout
+        android:id="@+id/widget_add_wrap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="#33000000"
+        android:elevation="8dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center"
+        android:clickable="true">
+
+        <RelativeLayout
+            android:id="@+id/widget_add"
+            android:layout_width="300dp"
+            android:layout_height="175dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="56dp"
+            android:layout_marginEnd="56dp"
+            android:background="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/widget_add_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Что вы хотите добавить?"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:textSize="18sp"
+                android:fontFamily="@font/ubuntu_medium"
+                android:gravity="center"/>
+
+            <ImageButton
+                android:id="@+id/widget_add_close_button"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="8dp"
+                android:background="@null"
+                android:contentDescription="Закрыть"
+                android:src="@drawable/close_ico"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/widget_add_button_add_course"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="55dp"
+                android:backgroundTint="@color/blue"
+                android:text="Новый курс лечения"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/ubuntu"/>
+
+            <Button
+                android:id="@+id/widget_add_button_add_medicament"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="110dp"
+                android:backgroundTint="@color/sea"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:text="Новое лекарство"
+                android:fontFamily="@font/ubuntu"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+    <!--  Конец виджета добавления  -->
+
+    <LinearLayout
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:animationCache="false"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:onClick="goProfile"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/profile_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/profile_ico3" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu_medium"
+            android:text="Максим Бугаков"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/page_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="0dp"
+        android:fontFamily="@font/ubuntu_bold"
+        android:text="Настройки"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <TextView
+        android:id="@+id/page_name_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/ubuntu"
+        android:text="Уведомления"
+        android:textColor="#858585"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/page_name" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/page_name_1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/ubuntu_medium"
+                android:text="Напоминание о просроченном сроке годности лекарства"
+                android:textColor="#000000"
+                android:textColorHint="#000000" />
+
+            <Switch
+                android:id="@+id/switch1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="300dp"
+                android:fontFamily="@font/ubuntu_medium"
+                android:layout_height="wrap_content"
+                android:text="Напоминание о приёме лекарства"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"/>
+
+            <Switch
+                android:id="@+id/switch2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+    <ImageButton
+        android:id="@+id/addButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@android:color/transparent"
+        android:contentDescription="Добавить"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/plus_ico" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#FFFFFF"
+            android:contentDescription="Главная"
+            android:onClick="goMain"
+            app:srcCompat="@drawable/home_ico" />
+
+        <ImageButton
+            android:id="@+id/pills"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#FFFFFF"
+            android:contentDescription="Курсы"
+            android:onClick="goCourses"
+            app:srcCompat="@drawable/pill_ico" />
+
+        <ImageButton
+            android:id="@+id/first_aid_kit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#FFFFFF"
+            android:contentDescription="Аптечка"
+            android:onClick="goFirstAidKit"
+            app:srcCompat="@drawable/first_aid_kit" />
+
+        <ImageButton
+            android:id="@+id/settings"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#FFFFFF"
+            android:contentDescription="Настройки"
+            app:srcCompat="@drawable/settings_in_ico" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

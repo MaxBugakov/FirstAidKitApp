@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddMedicamentActivity"
+    android:background="#FFFFFF">
+
+    <ImageButton
+        android:id="@+id/back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@android:color/transparent"
+        android:contentDescription="Назад"
+        android:elevation="0dp"
+        android:onClick="goBack"
+        android:src="@drawable/back_reg_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:text="Добавьте лекарство"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/name_form"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView">
+
+        <TextView
+            android:id="@+id/name_form_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:src="@drawable/username_icon"
+            android:text="Имя"
+            android:textSize="15sp"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/ubuntu_light"/>
+
+        <EditText
+            android:id="@+id/name_form_input"
+            android:layout_width="242dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu_light"
+            android:hint="Имя"
+            android:inputType="textPersonName"
+            android:minHeight="48dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/expiration_date_form"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name_form">
+
+        <TextView
+            android:id="@+id/expiration_date_form_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:src="@drawable/username_icon"
+            android:text="Годен до"
+            android:textSize="15sp"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/ubuntu_light"/>
+
+        <EditText
+            android:id="@+id/expiration_date_form_input"
+            android:layout_width="242dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu_light"
+            android:hint="Годен до"
+            android:inputType="text"
+            android:minHeight="48dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/quantity_form"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/expiration_date_form">
+
+        <TextView
+            android:id="@+id/quantity_form_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:src="@drawable/username_icon"
+            android:text="Количество"
+            android:textSize="15sp"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/ubuntu_light"/>
+
+        <EditText
+            android:id="@+id/quantity_form_input"
+            android:layout_width="242dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu_light"
+            android:hint="Количество"
+            android:inputType="number"
+            android:minHeight="48dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/type_form"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/quantity_form">
+
+        <TextView
+            android:id="@+id/type_form_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:src="@drawable/username_icon"
+            android:text="Вид"
+            android:textSize="15sp"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/ubuntu_light"/>
+
+<!--        <EditText-->
+<!--            android:id="@+id/type_form_input"-->
+<!--            android:layout_width="242dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:fontFamily="@font/ubuntu_light"-->
+<!--            android:hint="Вид"-->
+<!--            android:inputType="textPersonName"-->
+<!--            android:minHeight="48dp" />-->
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="242dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/comment_form"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/type_form">
+
+        <TextView
+            android:id="@+id/comment_form_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:src="@drawable/username_icon"
+            android:text="Комментарий"
+            android:textSize="15sp"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/ubuntu_light"/>
+
+        <EditText
+            android:id="@+id/comment_form_input"
+            android:layout_width="242dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu_light"
+            android:hint="Комментарий"
+            android:inputType="text"
+            android:minHeight="48dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="242dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="@color/sea"
+        android:text="Добавить"
+        android:fontFamily="@font/ubuntu_medium"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/comment_form" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

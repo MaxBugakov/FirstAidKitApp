@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CourseFragment">
+
+    <ListView
+        android:id="@+id/course_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/null_course_list_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:elevation="100dp"
+        android:fontFamily="@font/ubuntu"
+        android:gravity="center"
+        android:text="Курсы отсутствуют"
+        android:textSize="16sp"
+        android:visibility="invisible" />
+
+</FrameLayout>

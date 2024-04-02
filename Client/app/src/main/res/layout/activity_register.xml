@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity"
+    android:background="#FFFFFF">
+
+    <ImageButton
+        android:id="@+id/back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@android:color/transparent"
+        android:contentDescription="Назад"
+        android:elevation="0dp"
+        android:onClick="goLogin"
+        android:src="@drawable/back_reg_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/login_img"
+        android:elevation="-1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/register_title"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView3"
+        android:layout_width="242dp">
+        <TextView
+            android:id="@+id/register_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu"
+            android:text="Регистрация"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/phone_form"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_title">
+
+        <TextView
+            android:id="@+id/phone_form_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:src="@drawable/username_icon"
+            android:text="Номер"
+            android:textSize="15sp"
+            android:layout_marginStart="5dp"/>
+
+        <EditText
+            android:id="@+id/phone_form_input"
+            android:layout_width="242dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu_light"
+            android:hint="Номер"
+            android:inputType="phone"
+            android:minHeight="48dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/first_name_form"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/phone_form">
+
+        <TextView
+            android:id="@+id/first_name_form_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:src="@drawable/username_icon"
+            android:text="Имя"
+            android:textSize="15sp"
+            android:layout_marginStart="5dp"/>
+
+        <EditText
+            android:id="@+id/first_name_form_input"
+            android:layout_width="242dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu_light"
+            android:hint="Имя"
+            android:inputType="textPersonName"
+            android:minHeight="48dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/last_name_form"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/first_name_form">
+
+        <TextView
+            android:id="@+id/last_name_form_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:src="@drawable/username_icon"
+            android:text="Фамилия"
+            android:textSize="15sp"
+            android:layout_marginStart="5dp"/>
+
+        <EditText
+            android:id="@+id/last_name_form_input"
+            android:layout_width="242dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu_light"
+            android:hint="Фамилия"
+            android:inputType="textPersonName"
+            android:minHeight="48dp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/password_form"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/last_name_form">
+
+        <TextView
+            android:id="@+id/password_form_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:src="@drawable/username_icon"
+            android:text="Пароль"
+            android:textSize="15sp"
+            android:layout_marginStart="5dp"/>
+
+        <EditText
+            android:id="@+id/password_form_input"
+            android:layout_width="242dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu_light"
+            android:hint="Пароль"
+            android:inputType="textPassword"
+            android:minHeight="48dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="268dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/blue"
+        android:fontFamily="@font/ubuntu_light"
+        android:onClick="readRegisterForm"
+        android:text="Зарегестрироваться"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_form" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

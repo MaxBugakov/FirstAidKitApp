@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp">
+
+            <ImageView
+                android:id="@+id/course_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="left"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile_ico3" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/course_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="Максим Бугаков"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/course_pills_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Анальгин"
+            android:fontFamily="@font/ubuntu"
+            android:textSize="18sp"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/course_dates"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30.03 - 20.05"
+            android:fontFamily="@font/ubuntu"
+            android:layout_marginTop="2dp"
+            android:textSize="14sp"
+            android:textColor="#777777" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/course_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="60%"
+            android:fontFamily="@font/ubuntu_medium"
+            android:textSize="20sp"
+            android:textColor="@color/sea" />
+    </LinearLayout>
+</LinearLayout>

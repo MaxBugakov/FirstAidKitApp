@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/medicament_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Анальгин"
+            android:fontFamily="@font/ubuntu_medium"
+            android:textSize="18sp"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/medicament_expiration_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Годен до: 23.04.2023"
+            android:fontFamily="@font/ubuntu"
+            android:layout_marginTop="2dp"
+            android:textSize="14sp"
+            android:textColor="#777777" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/medicament_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20 таблеток"
+            android:fontFamily="@font/ubuntu"
+            android:textSize="16sp"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+</LinearLayout>
