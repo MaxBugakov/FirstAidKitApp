@@ -160,7 +160,7 @@
                     android:layout_marginStart="5dp"
                     android:fontFamily="@font/ubuntu_light"
                     android:src="@drawable/username_icon"
-                    android:text="Имя"
+                    android:text="Название"
                     android:textColor="@color/black"
                     android:textSize="15sp" />
 
@@ -169,7 +169,7 @@
                     android:layout_width="242dp"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/ubuntu_light"
-                    android:hint="Имя"
+                    android:hint="Название"
                     android:inputType="textPersonName"
                     android:minHeight="48dp"
                     android:textColorHint="#BFBFBF" />

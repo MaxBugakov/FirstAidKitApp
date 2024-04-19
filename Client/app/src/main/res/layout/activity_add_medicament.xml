@@ -53,7 +53,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:src="@drawable/username_icon"
-            android:text="Имя"
+            android:text="Название"
             android:textSize="15sp"
             android:layout_marginStart="5dp"
             android:fontFamily="@font/ubuntu_light"/>
@@ -63,7 +63,7 @@
             android:layout_width="242dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/ubuntu_light"
-            android:hint="Имя"
+            android:hint="Название"
             android:inputType="textPersonName"
             android:minHeight="48dp" />
     </LinearLayout>
