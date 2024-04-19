@@ -35,16 +35,21 @@ public class RegisterActivity extends AppCompatActivity {
         EditText password = findViewById(R.id.password_form_input);
 
 
-        if (phone.getText().toString().isEmpty() || password.getText().toString().isEmpty() ||
-                name.getText().toString().isEmpty() || surname.getText().toString().isEmpty()) {
+        if (phone.getText().toString().trim().isEmpty() || password.getText().toString().trim().isEmpty() ||
+                name.getText().toString().trim().isEmpty() || surname.getText().toString().trim().isEmpty()) {
             Toast.makeText(getApplicationContext(), "Поля не могут быть пустыми", Toast.LENGTH_LONG).show();
             return;
         }
+        if (!phone.getText().toString().trim().matches("^8\\d{10}$")) {
+            Toast.makeText(getApplicationContext(), "Номер должен быть в формате 81234567890", Toast.LENGTH_LONG).show();
+            return;
+        }
+
         ApiManager apiManager = new ApiManager(this);
 
         // Вызываем метод registerUser() для регистрации пользователя
-        apiManager.registerUser(phone.getText().toString(), name.getText().toString(),
-                surname.getText().toString(), password.getText().toString(), new ApiManager.RegisterCallback() {
+        apiManager.registerUser(phone.getText().toString().trim(), name.getText().toString().trim(),
+                surname.getText().toString().trim(), password.getText().toString().trim(), new ApiManager.RegisterCallback() {
             @Override
             public void onSuccess(int userId) {
                 // Регистрация прошла успешно
